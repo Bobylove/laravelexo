@@ -17,4 +17,18 @@ class ProductController extends Controller
 		$product = Product::find($id);
 		return view('products.show', ['product'=>$product]);
 	}
+
+	public function postSell($id){
+		$product = Product::find($id);
+		$product->stock--;
+		$product->save();
+		return back();
+	}
+
+	public function postRestock($id){
+		$product = Product::find($id);
+		$product->stock++;
+		$product->save();
+		return back();
+	}
 }

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.css">
 </head>
 <body>
     <menu>
@@ -12,6 +13,7 @@
         
     </menu>
     <br>
+    
 
     @yield('content')
 
