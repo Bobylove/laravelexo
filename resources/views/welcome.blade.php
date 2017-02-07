@@ -10,13 +10,14 @@
 
         <h1><a href="/">Home</a></h1>
         <h1><a href="/products">Produits</a></h1>
+        <h1><a href="/products/addProduct">ajout</a></h1>
+
         
     </menu>
     <br>
     
-
     @yield('content')
 
-  
+
 </body>
 </html>

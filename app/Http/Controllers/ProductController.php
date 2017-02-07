@@ -9,8 +9,8 @@ class ProductController extends Controller
 {
 	public function getIndex(){
 		
-		 $products = \App\Product::all();
-		 return view('products.layout', ['produits'=>$products]);
+		$products = \App\Product::all();
+		return view('products.layout', ['produits'=>$products]);
 	}
 
 	public function getShow($id){
@@ -29,6 +29,24 @@ class ProductController extends Controller
 		$product = Product::find($id);
 		$product->stock++;
 		$product->save();
+		return back();
+	}
+
+	public function getShowForm(){
+
+		return view('products.addProduct');
+	}
+
+	public function postAdd(Request $request){
+		
+		$prod = new Product;
+		$prod->id =  $request->id;
+		$prod->name =  $request->name;
+		$prod->price =  $request->price;
+		$prod->stock =  $request->stock; 
+		$prod->origin =  $request->origin;
+		$prod->description =  $request->description;
+		$prod->save();
 		return back();
 	}
 }

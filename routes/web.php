@@ -22,3 +22,7 @@ Route::get('/products/show/{id}','ProductController@getShow');
 Route::post('/products/sell/{id}','ProductController@postSell');
 
 Route::post('/products/restock/{id}','ProductController@postRestock');
+
+Route::get('/products/addProduct','ProductController@getShowForm');
+
+Route::post('/product/addProduct/new','ProductController@postAdd');
