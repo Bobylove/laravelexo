@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Stock</title>
+    <title>Home</title>
 </head>
 <body>
-    <h1>Liste des produits</h1>
+    <menu>
+
+        <h1><a href="/">Home</a></h1>
+        <h1><a href="/products">Produits</a></h1>
+        
+    </menu>
+    <br>
+
+    @yield('content')
+
   
 </body>
 </html>

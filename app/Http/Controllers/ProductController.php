@@ -12,4 +12,9 @@ class ProductController extends Controller
 		 $products = \App\Product::all();
 		 return view('products.layout', ['produits'=>$products]);
 	}
+
+	public function getShow($id){
+		$product = Product::find($id);
+		return view('products.show', ['product'=>$product]);
+	}
 }

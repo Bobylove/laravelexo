@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>prod</title>
-</head>
-<body>
-	<h1>Ma liste de produits</h1>
+@extends('welcome')
 
-	@foreach ($produits as $product)
+@section('content')
 
-	<li>{{$product->name}}</li>
-	@endforeach
-</body>
-</html>
+<h1>Ma liste de produits</h1>
+
+@foreach ($produits as $product)
+
+<li><a href="/products/show/{{$product->id}}">{{$product->name}}</a></li>
+@endforeach
+
+@stop
