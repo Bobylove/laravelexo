@@ -12,15 +12,15 @@
 	<form class="ui form" action="/product/addProduct/new" method="post">
 		{{csrf_field()}}
 		<label for="name">Nom du produit</label>
-		<input type="text" id="name" name="name" value="">
+		<input type="text" id="name" name="name" >
 		<label for="price">Prix</label>
-		<input type="text" id="price" name="price" value="">
+		<input type="text" id="price" name="price" >
 		<label for="origin">Origine</label>
-		<input type="text" id="origin" name="origin" value="">
+		<input type="text" id="origin" name="origin" >
 		<label for="stock">Stock</label>
-		<input type="text" id="stock" name="stock" value="">
+		<input type="text" id="stock" name="stock" >
 		<label for="description">description</label>
-		<input type="text" id="description" name="description" value="">
+		<input type="text" id="description" name="description">
 		<br>
 		<input type="submit" value="Enregistrer les nouveautés">
 

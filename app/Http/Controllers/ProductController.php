@@ -7,6 +7,8 @@ use App\Product;
 
 class ProductController extends Controller
 {
+	 
+
 	public function getIndex(){
 		
 		$products = \App\Product::all();
@@ -49,4 +51,32 @@ class ProductController extends Controller
 		$prod->save();
 		return back();
 	}
+
+	public function postDelete(Request $request){
+
+		$productDel = Product::find($request->id);
+		$productDel->delete();
+		return back();
+
+	}
+
+	public function getEdit($id){
+
+		$product = Product::find($id);
+		return view('edits.edit', ['produit'=>$product]);
+	}
+
+	public function postEdit(Request $request){
+
+		$product = Product::find($request->id);
+		$product->name = $request->name;
+		$product->price = $request->price;
+		$product->stock = $request->stock;
+		$product->origin = $request->origin;
+		$product->description = $request->description;
+		$product->save();
+		return back();
+
+	}
+
 }

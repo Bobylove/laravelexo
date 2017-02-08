@@ -26,3 +26,9 @@ Route::post('/products/restock/{id}','ProductController@postRestock');
 Route::get('/products/addProduct','ProductController@getShowForm');
 
 Route::post('/product/addProduct/new','ProductController@postAdd');
+
+Route::post('/product/delete/{id}','ProductController@postDelete');
+
+Route::post('/edits/edit/{id}', 'ProductController@postEdit');
+
+Route::get('/edits/edit/{id}', 'ProductController@getEdit');
