@@ -7,7 +7,26 @@ use App\Product;
 
 class ProductController extends Controller
 {
-	 
+
+
+	public function getTotalStock(){
+		
+		$products = \App\Product::all();
+		$totalStock = 0;
+		
+		foreach ($products as $value) {
+			$totalStock = $totalStock + $value->stock;
+			
+		}
+		$prod = \App\Product::all();
+		$totalPrice = 0;
+		foreach ($prod as $value) {
+			$totalPrice = $value->stock * $value->price / 100;
+		}
+		
+		
+		return view('totalStocks.totalStock', ['produits'=>$products,"totalStock"=>$totalStock, "totalprice"=>$totalPrice]);
+	}
 
 	public function getIndex(){
 		
@@ -29,7 +48,7 @@ class ProductController extends Controller
 
 	public function postRestock($id){
 		$product = Product::find($id);
-		$product->stock++;
+		$product->stock++ ;
 		$product->save();
 		return back();
 	}
@@ -78,5 +97,6 @@ class ProductController extends Controller
 		return back();
 
 	}
+	
 
 }

@@ -27,7 +27,7 @@
 
 		<form action="/products/sell/{{$product->id}}" method="post">
 			{{csrf_field()}}
-			<button class="ui red button">-</button>
+			<button class="ui big red button">-</button>
 
 		</form>
 
@@ -35,7 +35,7 @@
 
 		<form action="/products/restock/{{$product->id}}" method="post">
 			{{csrf_field()}}
-			<button class="ui  green button">+</button>
+			<button class="ui big green button">+</button>
 			
 		</form>
 		

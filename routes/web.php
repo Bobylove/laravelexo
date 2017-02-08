@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-	return view('welcome');
-});
+
+Route::get('/','ProductController@getTotalStock');
 
 Route::get('/products', 'ProductController@getIndex');
 

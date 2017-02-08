@@ -8,17 +8,18 @@
 <body>
 	
 
-		<div class="ui three item menu">
-			<a class="item" href="/">Home</a>
-			<a class="item" href="/products">Produits</a>
-			<a class="item" href="/products/addProduct">ajout</a>
-		</div>
+	<div class="ui three item menu">
+		<a class="item" href="/">Home</a>
+		<a class="item" href="/products">Produits</a>
+		<a class="item" href="/products/addProduct">ajout</a>
+	</div>
 
 	
 	<br>
 
 
 	@yield('content')
+
 
 </body>
 </html>

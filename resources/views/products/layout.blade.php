@@ -1,8 +1,8 @@
 @extends('welcome')
 
 @section('content')
-<div>
-	<h1>Ma liste de produits</h1>
+<div class="ui centered grid">
+	<h1 >Ma liste de produits</h1>
 	<br>
 	<br>
 	<br>
@@ -11,7 +11,7 @@
 <div class="ui two column centered grid">
 	<div class="ui link cards">
 		@foreach ($produits as $product)
-
+		
 		<div class="card">
 			<a href="/products/show/{{$product->id}}"><h4>id : {{$product->id}}</h4></a>
 			<div class="content">
@@ -43,8 +43,10 @@
 		</div>
 
 		@endforeach
+
 	</div>
 </div>
-
+<br>
+<br>
 
 @stop
