@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>edit</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.css">
-</head>
-<body>
-	<br>
-	<h2><a href="/">Home</a></h2>
-	<br>
-	<br>
+@extends('welcome')
 
+@section('content')
 	<h1>Edité le produit</h1>
 
 	<form class="ui form" action="/edits/edit/{{$produit->id}}" method="post">
 		{{csrf_field()}}
+		{{ method_field('PUT') }}
 		<input type="hidden" value="{{$produit->id}}">
 		<label for="name">Nom du produit</label>
 		<input type="text" id="name" name="name" value="{{$produit->name}}">
@@ -30,5 +21,4 @@
 		<input type="submit" class="ui green button" value="Enregistrer">
 
 	</form>
-</body>
-</html>
+@stop

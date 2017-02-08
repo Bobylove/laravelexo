@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.css">
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.css">
 </head>
 <body>
-    <menu>
+	
 
-        <h1><a href="/">Home</a></h1>
-        <h1><a href="/products">Produits</a></h1>
-        <h1><a href="/products/addProduct">ajout</a></h1>
+		<div class="ui three item menu">
+			<a class="item" href="/">Home</a>
+			<a class="item" href="/products">Produits</a>
+			<a class="item" href="/products/addProduct">ajout</a>
+		</div>
 
-        
-    </menu>
-    <br>
-    
-    @yield('content')
+	
+	<br>
 
+
+	@yield('content')
 
 </body>
 </html>
