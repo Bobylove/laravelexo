@@ -21,7 +21,7 @@ class ProductController extends Controller
 		$prod = \App\Product::all();
 		$totalPrice = 0;
 		foreach ($prod as $value) {
-			$totalPrice = $value->stock * $value->price / 100;
+			$totalPrice =$totalPrice + $value->stock * $value->price / 100;
 		}
 		
 		
